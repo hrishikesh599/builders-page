@@ -7,7 +7,7 @@ this is designed in one of my favourite theme- dark glassmorphism
 This is my Builder page, created for the Pixl "Raise your Builder Page" trial.It is HTML, CSS and JS that you can open directly in a browser.
 ## Screenshots
  
-![App Screenshot](screenshot.png)
+![App Screenshot](Screenshot.png)
  
 
  
