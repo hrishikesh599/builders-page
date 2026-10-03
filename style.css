@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: #050807;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.mh {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+}
+#my-name {
+    font-size: clamp(3rem, 9vw, 8rem);
+    margin: 0;
+    color: #9dffb3;
+    letter-spacing: -3px;
+}
+#type-text {
+    font-size: 1.1rem;
+    min-height: 25px;
+    opacity: 0.7;
+}
+.scroll-note {
+    position: absolute;
+    bottom: 35px;
+    opacity: 0.45;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+.csn {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+.csg {
+    position: relative;
+    width: 100%;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+.card {
+    position: absolute;
+    width: min(72vw, 430px);
+    height: 300px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(80, 255, 130, 0.06);
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease,
+        filter 0.8s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.cardn {
+    color: #8cffaa;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+.card h2 {
+    margin: 0 0 12px 0;
+    font-size: 2rem;
+}
+.card p {
+    margin: 0;
+    line-height: 1.7;
+    opacity: 0.7;
+}
+.card:hover {
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(80, 255, 130, 0.12);
+}
+.card a {
+    color: azure;
+}
+.controls {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.controls button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.controls button:hover {
+    background: rgba(140,255,170,0.12);
+    transform: scale(1.08);
+}
+#cardcount {
+    opacity: 0.6;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    opacity: 0.4;
+}
+@media (max-width: 700px) {
+    #my-name {
+        font-size: 15vw;
+	}
+
+    .csg {
+        height: 420px;
+        perspective: 900px;
+	}
+
+    .card {
+        width: 82vw;
+        height: 280px;
+        padding: 28px;
+	}
+
+    .card h2 {
+        font-size: 1.6rem;
+	}
+}
